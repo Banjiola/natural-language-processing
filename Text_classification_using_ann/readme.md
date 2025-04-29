@@ -124,18 +124,25 @@ Example:
 
 ## 📊 Dashboard / Visuals
 
-- Confusion matrix per model (optional)
-- Word clouds by class
-- Model training/validation accuracy and loss plots
+The confusion matrix of the top three models are attached below 
+- Confusion matrix of MLP with randomly initiated word embeddings
+
+![MLP Confusion Matrix](images/MLP_cmap.png)
+
+- Confusion matrix of BiLSTM with glove word embeddings
+
+![BiLSTM Confusion Matrix](images/bilstm_cmap.png)
+
+- Confusion matrix of CNN with glove word embeddings
+
+![CNN Confusion Matrix](images/cnn_cmap.png)
 
 ---
 
 ## 🧾 Conclusion
 
-- Deep learning models effectively classify AG News articles with high accuracy.
-- Pretrained embeddings offer slight boosts in recall/F1 depending on model type.
-- MLPs are computationally efficient with strong AUC, while BiLSTMs and CNNs provide robust precision-recall balance.
-
+The results of our experiments indicate that BiLSTM has the most consistent performance, emerging as the best classifier in all embeddings besides the randomly initiated embeddings. MLP emerged as the best classifier overall on our test dataset.
+Although the study demonstrated the suitability of Artificial Neural Networks to classify the dataset, a limitation of our study was that the text headlines were too clean. This might not reflect the nature of data from social media, emails, and articles, necessitating extra cleaning efforts.
 
 
 ---
